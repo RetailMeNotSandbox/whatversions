@@ -1,0 +1,29 @@
+{
+  "name": "@rmn/whatversions",
+  "version": "1.2.0",
+  "description": "Dead simple script to show you the difference between your package.json dependency versions specified and what you actually have in node_modules.",
+  "bin": {
+    "whatversions": "bin/whatversions"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/tests/index-tests.js"
+  },
+  "publishConfig": {
+    "registry": "http://npm.rmn.io"
+  },
+  "author": "Way Spurr-Chen <wspurrchen@rmn.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "easy-table": "^1.0.0",
+    "es6-promise": "^3.1.2",
+    "minimist": "^1.2.0",
+    "npmlog": "^2.0.3",
+    "semver": "^5.1.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5"
+  }
+}

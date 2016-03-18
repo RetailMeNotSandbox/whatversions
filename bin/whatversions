@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+var whatversions = require( '../index' );
+var Table = require( 'easy-table' );
+var path = require( 'path' );
+var log = require( 'npmlog' );
+var argv = require( 'minimist' )( process.argv.slice(2) );
+var colors = require( 'colors/safe' );
+
+if ( argv.h || argv.help ) {
+    printUsage();
+    process.exit();
+} else {
+    whatversions.run( argv._[ 0 ] || '.' ).then( function ( dependenciesSeen ) {
+		var t = new Table();
+
+		log.info( 'fyi', 'Showing specified dependency versions vs. actual installed versions.' );
+		Object.keys( dependenciesSeen ).forEach( function ( dependencyKey ) {
+			var dependency = dependenciesSeen[ dependencyKey ];
+			var actual;
+			var semver;
+
+			switch ( dependency.match ) {
+				case 'perfect':
+					actual = dependency.actual;
+					semver = colors.green( dependency.match );
+					break;
+				case 'match':
+					actual = dependency.actual;
+					semver = colors.yellow( dependency.match );
+					break;
+				case 'invalid':
+					actual = colors.red( dependency.actual );
+					semver = colors.red( dependency.match );
+					break;
+				case 'missing':
+					actual = colors.red( dependency.match );
+					semver = colors.red( dependency.match );
+					break;
+			}
+
+			t.cell( 'name', dependency.name );
+			t.cell( 'specified', dependency.specified );
+			t.cell( 'actual', actual );
+			t.cell( 'semver', semver );
+			t.newRow();
+		} );
+
+		console.log( t.toString() );
+	} ).catch( function ( e ) {
+		log.error( e );
+		log.error( e.stack );
+	} );
+}
+
+function printUsage () {
+    log.info( 'usage:' );
+    log.info( 'whatversions [path/to/directory/with/package.json]' );
+}

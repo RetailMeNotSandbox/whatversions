@@ -1,0 +1,14 @@
+{
+  "name": "@not-a-real-package/match",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Way Spurr-Chen <wspurrchen@rmn.com>",
+  "dependencies": {
+    "colors": "1.1.2",
+    "left-pad": "^1.0.0"
+  },
+  "devDependencies": {
+    "lodash.isarray": "^3.0.2",
+    "npmlog": "2.0.3"
+  }
+}
