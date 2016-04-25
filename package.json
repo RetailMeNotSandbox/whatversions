@@ -1,6 +1,6 @@
 {
   "name": "@rmn/whatversions",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Dead simple script to show you the difference between your package.json dependency versions specified and what you actually have in node_modules.",
   "bin": {
     "whatversions": "bin/whatversions"
@@ -13,7 +13,7 @@
     "registry": "http://npm.rmn.io"
   },
   "author": "Way Spurr-Chen <wspurrchen@rmn.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
     "easy-table": "^1.0.0",
