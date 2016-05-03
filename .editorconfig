@@ -1,0 +1,6 @@
+[**.js]
+indent_style = tab
+trim_trailing_whitespace = true
+insert_final_newline = true
+quote_type = single
+indent_brace_style = K&R
