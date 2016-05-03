@@ -1,7 +1,7 @@
 var path = require( 'path' );
 var fs = require( 'fs' );
 var log = require( 'npmlog' );
-var Promise = require( 'es6-promise' ).Promise;
+var Promise = require( 'bluebird' );
 var semver = require( 'semver' );
 
 function run ( pathToRepo ) {
