@@ -1,6 +1,6 @@
 {
   "name": "whatversions",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Dead simple script to show you the difference between your package.json dependency versions specified and what you actually have in node_modules.",
   "bin": {
     "whatversions": "bin/whatversions"
