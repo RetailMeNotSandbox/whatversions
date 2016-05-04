@@ -1,6 +1,6 @@
 {
   "name": "whatversions",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Dead simple script to show you the difference between your package.json dependency versions specified and what you actually have in node_modules.",
   "bin": {
     "whatversions": "bin/whatversions"
@@ -8,9 +8,6 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/tests/index-tests.js"
-  },
-  "publishConfig": {
-    "registry": "http://npm.rmn.io"
   },
   "author": "Way Spurr-Chen <wspurrchen@rmn.com>",
   "license": "MIT",
