@@ -116,7 +116,7 @@ whatversions.run( 'path/to/directory' ).then( function ( dependenciesData ) {
 } );
 ```
 
-Note that it returns a [Promises/A+ compliant Promise object](https://promisesaplus.com/) (specifically, I am using the [es6-promise](https://github.com/stefanpenner/es6-promise) module).
+Note that it returns a [Promises/A+ compliant Promise object](https://promisesaplus.com/) (specifically, I am using [bluebird](http://bluebirdjs.com)).
 
 `dependenciesData` will be an object where each key is the name of a given dependency, and the value is an object with the following format:
 
