@@ -5,7 +5,7 @@ Dead simple script to show you the difference between your package.json dependen
 # Installation
 
 ```bash
-npm install -g @rmn/whatversions
+npm install -g whatversions
 ```
 
 # CLI Usage
